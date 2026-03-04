@@ -109,3 +109,24 @@ News.find().sort({ createdAt: -1 })
 - Uses centralized Express error middleware.
 - Uses CORS-enabled API.
 - Uses Mongoose timestamps (`createdAt`, `updatedAt`) automatically.
+
+## 7) Frontend Routing (React Router)
+
+- Routes available:
+  - `/` → Home
+  - `/about` → About
+  - `/contact` → Contact Us
+  - `/privacy` → Privacy Policy
+  - `/terms` → Terms and Conditions
+- These routes are handled on the client side using `BrowserRouter` and nested layout routes.
+
+## 8) Deployment Routing Note (Important)
+
+For production hosting, configure your server/platform to rewrite all frontend routes to `index.html`.
+This is required so direct access and refresh on paths like `/terms` or `/privacy` loads the app correctly.
+
+Examples:
+
+- Nginx: use `try_files $uri /index.html;`
+- Netlify: add `_redirects` rule `/* /index.html 200`
+- Vercel: add rewrite rule to map all routes to `/index.html`

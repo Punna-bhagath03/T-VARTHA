@@ -1,9 +1,7 @@
 import axios from 'axios';
 import { NewsItem } from '../types/news';
 
-const api = axios.create({
-  baseURL: 'http://localhost:5000/api'
-});
+const api = axios.create({ baseURL: import.meta.env.VITE_API_BASE_URL ?? 'http://localhost:5000/api' });
 
 export const fetchNews = async (): Promise<NewsItem[]> => {
   const response = await api.get<NewsItem[]>('/news');
