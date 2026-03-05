@@ -6,7 +6,7 @@
 client/.vite
 
 # Environment files
-server/.env
+.env*
 
 # Logs
 npm-debug.log*
