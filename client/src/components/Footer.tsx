@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 const Footer = (): JSX.Element => {
   return (
     <footer className="site-footer">
@@ -9,8 +7,8 @@ const Footer = (): JSX.Element => {
         <p>Contact: 6304978211</p>
       </div>
       <div className="footer-links">
-        <Link to="/privacy">Privacy Policy</Link>
-        <Link to="/terms">Terms & Conditions</Link>
+        <a href="/policies/privacy-policy.pdf">Privacy Policy</a>
+        <a href="/policies/terms-and-conditions.pdf">Terms & Conditions</a>
       </div>
     </footer>
   );
